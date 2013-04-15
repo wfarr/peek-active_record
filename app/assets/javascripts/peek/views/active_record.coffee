@@ -1,5 +1,5 @@
 $(document).on 'peek:update', ->
-  arContext = $('#peek-context-active_record')
+  arContext = $('#peek-context-active-record')
   if arContext.size()
     context = arContext.data('context')
     objects = context.object_count

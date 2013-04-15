@@ -17,11 +17,7 @@ class ActiveRecord::Base
     ActiveRecord::Base.obj_count.update { |val| val + 1 }
 
     if ActiveRecord::Base.obj_types_enabled
-      if ActiveRecord::Base.obj_types.has_key? self.class.name
-        ActiveRecord::Base.obj_types[self.class.name].update { |val| val + 1 }
-      else
-        ActiveRecord::Base.obj_types[self.class.name] = Atomic.new(1)
-      end
+      ActiveRecord::Base.obj_types[self.class.name] += 1
     end
   end
 end

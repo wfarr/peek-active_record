@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ``` ruby
 # config/initializers/peek.rb
-Peek.into Peek::Views::ActiveRecord
+Peek.into Peek::Views::ActiveRecord, :type_tracking => false
 ```
 
 ``` coffee

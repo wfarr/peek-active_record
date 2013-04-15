@@ -1,6 +1,6 @@
 # Peek::ActiveRecord
 
-TODO: Write a gem description
+Peek into your ActiveRecord stats.
 
 ## Installation
 
@@ -18,7 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+``` ruby
+# config/initializers/peek.rb
+Peek.into Peek::Views::ActiveRecord
+```
+
+``` coffee
+# app/assets/application.coffee
+#= require 'peek/views/active_record'
+```
 
 ## Contributing
 

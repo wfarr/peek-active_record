@@ -28,6 +28,10 @@ Peek.into Peek::Views::ActiveRecord
 #= require 'peek/views/active_record'
 ```
 
+Then, in any ActiveRecord model you wish to watch allocations of
+(please note that after_initialize does impair performance of your app slightly)
+simply include the `Peek::ActiveRecord::ObjectStats` module.
+
 ## Contributing
 
 1. Fork it

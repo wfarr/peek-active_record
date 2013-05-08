@@ -1,4 +1,4 @@
-$(document).on 'peek:render', (event, data) ->
+$(document).on 'peek:render', (event, request_id, data) ->
   object_count = data.context['active-record'].object_count
   object_types = data.context['active-record'].object_types
 

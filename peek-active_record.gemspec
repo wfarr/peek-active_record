@@ -2,7 +2,7 @@
 #
 Gem::Specification.new do |spec|
   spec.name          = "peek-active_record"
-  spec.version       = "0.4.0"
+  spec.version       = "0.5.0"
   spec.authors       = ["Will Farrington"]
   spec.email         = ["wfarr@github.com"]
   spec.description   = %q{Peek into your ActiveRecord stats.}

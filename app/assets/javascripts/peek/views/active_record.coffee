@@ -1,12 +1,11 @@
-$(document).on 'peek:update', ->
-  arContext = $('#peek-context-active-record')
-  if arContext.size()
-    context      = arContext.data('context')
-    objects      = context.object_count
-    object_types = context.object_types
+$(document).on 'peek:render', (event, request_id, data) ->
+  object_count = data.context['active-record'].object_count
+  object_types = data.context['active-record'].object_types
 
-    title = "<strong>#{objects} AR Objects</strong>"
-    for key, val of object_types
-      title += "<br>#{val} #{key}"
+  title = "<strong>#{object_count} AR Objects</strong>"
+  for key, val of object_types
+    title += "<br>#{val} #{key}"
 
-    $('#active_record-tooltip').attr('title', title).tipsy({html: true})
+  $('#active_record-tooltip').attr('title', title).tipsy
+    html: true
+    gravity: $.fn.tipsy.autoNS

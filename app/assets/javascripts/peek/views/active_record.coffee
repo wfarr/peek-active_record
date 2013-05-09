@@ -6,4 +6,6 @@ $(document).on 'peek:render', (event, request_id, data) ->
   for key, val of object_types
     title += "<br>#{val} #{key}"
 
-  $('#active_record-tooltip').attr('title', title).tipsy({html: true})
+  $('#active_record-tooltip').attr('title', title).tipsy
+    html: true
+    gravity: $.fn.tipsy.autoNS
